@@ -2,6 +2,8 @@ from flask import Flask, render_template, request, jsonify
 from threading import Thread
 import FyersWebSocket as Fskt
 import os 
+from UserConfig import access_token
+
 app = Flask(__name__)
 
 # This will keep track of whether the WebSocket should be running.
@@ -10,6 +12,7 @@ websocket_running = False
 def start_websocket():
     global websocket_running
     websocket_running = True
+    Fskt.connect(access_token)
     Fskt.main()
 
 @app.route('/')
@@ -36,4 +39,4 @@ def get_messages():
     return jsonify({'messages': Fskt.get_messages()})  # Example, adjust accordingly
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0')
