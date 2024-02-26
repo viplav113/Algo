@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 from threading import Thread
 import FyersWebSocket as Fskt
-
+import os 
 app = Flask(__name__)
 
 # This will keep track of whether the WebSocket should be running.
@@ -14,6 +14,7 @@ def start_websocket():
 
 @app.route('/')
 def index():
+    os.environ.get('access_token')
     return render_template('index.html')
 
 @app.route('/start', methods=['POST'])
