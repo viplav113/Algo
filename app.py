@@ -14,7 +14,7 @@ def start_websocket():
 
 @app.route('/')
 def index():
-    os.environ.get('access_token')
+    
     return render_template('index.html')
 
 @app.route('/start', methods=['POST'])
@@ -36,4 +36,4 @@ def get_messages():
     return jsonify({'messages': Fskt.get_messages()})  # Example, adjust accordingly
 
 if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0')
+    app.run(debug=True)
