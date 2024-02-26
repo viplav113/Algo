@@ -1,4 +1,3 @@
-import os
 # ===================================================================================
 # Fyers APi Details
 # ===================================================================================
@@ -11,7 +10,8 @@ response_type = "code"  ## The response_type always has to be "code"
 state = "sample"
 TokenUrl = "https://api-t1.fyers.in/api/v3/generate-authcode?client_id=CT3VFVIIHT-100&redirect_uri=https%3A%2F%2Fwww.google.com%2F&response_type=code&state=sample"
 auth_code = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhcGkubG9naW4uZnllcnMuaW4iLCJpYXQiOjE3MDcwMzA5NDIsImV4cCI6MTcwNzA2MDk0MiwibmJmIjoxNzA3MDMwMzQyLCJhdWQiOiJbXCJ4OjBcIiwgXCJ4OjFcIiwgXCJ4OjJcIiwgXCJkOjFcIiwgXCJkOjJcIiwgXCJ4OjFcIiwgXCJ4OjBcIl0iLCJzdWIiOiJhdXRoX2NvZGUiLCJkaXNwbGF5X25hbWUiOiJZUzA0NjQ0Iiwib21zIjoiSzEiLCJoc21fa2V5IjoiYWE0NDY0MGY0MWE0MDc3NmM1NGE1YTVjZjM5MjFhYjlhNTAzOWI1M2IzYTI2ZWFmZWVkNTlkOWEiLCJub25jZSI6IiIsImFwcF9pZCI6IkNUM1ZGVklJSFQiLCJ1dWlkIjoiYWYwNmI4MTQ5ZDI5NGVhYjkyN2ZkNDYwZWNiYjhhN2QiLCJpcEFkZHIiOiIwLjAuMC4wIiwic2NvcGUiOiIifQ.u9mcoqhk4VvXj6tVIWZIypd5nyZjjkuatYuPtKRaoRo"
-access_token = os.environ.get('access_token')
+access_token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhcGkuZnllcnMuaW4iLCJpYXQiOjE3MDg5MjQ4NDUsImV4cCI6MTcwODk5Mzg0NSwibmJmIjoxNzA4OTI0ODQ1LCJhdWQiOlsieDowIiwieDoxIiwieDoyIiwiZDoxIiwiZDoyIiwieDoxIiwieDowIl0sInN1YiI6ImFjY2Vzc190b2tlbiIsImF0X2hhc2giOiJnQUFBQUFCbDNCLXRXQUhaZnhjeDZQX3NpMGcySUkxZjdSTVJKWjU4czM0clVkU3o3SmVPZ0M5S3RpZjRLMVo3ZlhqMVdIY0MyQmRiWUpwb2JIRDNsNXVZa1F2UG81NVpseEhTcGVqV0RPSVJkNUpfQWV2M2pMQT0iLCJkaXNwbGF5X25hbWUiOiJTVVNISUwgU1VOSUwgS0FWQURFIiwib21zIjoiSzEiLCJoc21fa2V5IjoiYjBjZDEyNzkwNDViN2E1MmVhNmVkNThhYjcxNmQ4MTNkZjU5NTIzMTdiMDc1YTZiYTFhMGY2MjMiLCJmeV9pZCI6IllTMDQ2NDQiLCJhcHBUeXBlIjoxMDAsInBvYV9mbGFnIjoiTiJ9.irAIHz7b8O1mjoiYCCCpoHqOf539B__Da0m84oL3CO4'
+# Setup Related Configs
 # ===================================================================================
 ORB_timeFrame = 60  # in seconds
 symbols = ['NSE:BANKNIFTY24FEB47900CE', 'NSE:BANKNIFTY24FEB46500PE']
