@@ -36,4 +36,4 @@ def get_messages():
     return jsonify({'messages': Fskt.get_messages()})  # Example, adjust accordingly
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0')
