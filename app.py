@@ -2,8 +2,9 @@ from flask import Flask, render_template, request, jsonify
 from threading import Thread
 import FyersWebSocket as Fskt
 import os 
+from flask_cors import CORS 
 app = Flask(__name__)
-
+CORS(app) 
 # This will keep track of whether the WebSocket should be running.
 websocket_running = False
 
